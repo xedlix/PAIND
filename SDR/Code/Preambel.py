@@ -1,9 +1,4 @@
 import numpy as np
-from array import array
-from os import stat
-import matplotlib.pyplot as plt
-import socket
-import scipy.signal as signal
 import matplotlib.pyplot as plt
 from matplotlib.colors import BoundaryNorm
 from matplotlib.ticker import MaxNLocator
@@ -51,7 +46,8 @@ def display_spectrogram(x):
     levels = MaxNLocator(nbins=15).tick_values(z.min(),z.max())
     cmap = plt.get_cmap('PiYG')
     norm = BoundaryNorm(levels,ncolors=cmap.N,clip=True)
-    yp,xp = np.mgrid[slice(0,z.shape[0]),slice(0,z.shape[1])]
+    xp,yp = np.mgrid[slice(0,z.shape[0]),slice(0,z.shape[1])]           #ALT:    xp,yp = np.mgrid[slice(0,z.shape[0]),slice(0,z.shape[1])]
+
     fig = plt.figure()
     im = fig.gca().pcolormesh(xp,yp,z,cmap=cmap,norm=norm)
     fig.colorbar(im,ax=fig.gca())

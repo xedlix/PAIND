@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?grc format='1' created='3.7.13'?>
 <flow_graph>
-  <timestamp>Sun Apr 28 17:46:23 2019</timestamp>
+  <timestamp>Tue Oct 17 17:17:06 2023</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -30,7 +30,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 12)</value>
+      <value>(8, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>lime_to_file</value>
+      <value>top_block</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -101,7 +101,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 76)</value>
+      <value>(8, 80)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -113,7 +113,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>1.625e6</value>
+      <value>125e3</value>
     </param>
   </block>
   <block>
@@ -140,7 +140,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>C:\Users\yanni\OneDrive\Documents\Hochschule\5.Semester\PAIND\loraShortShortNew.sig</value>
+      <value>C:\Users\yanni\OneDrive\Documents\Hochschule\5.Semester\PAIND\loraShortShortNewSingle.sig</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -230,7 +230,7 @@
     </param>
     <param>
       <key>analog_bandw_ch0</key>
-      <value>1.65e6</value>
+      <value>0</value>
     </param>
     <param>
       <key>analog_bandw_ch1</key>
@@ -266,7 +266,7 @@
     </param>
     <param>
       <key>digital_bandw_ch0</key>
-      <value>1.625e6</value>
+      <value>0</value>
     </param>
     <param>
       <key>digital_bandw_ch1</key>
@@ -290,7 +290,7 @@
     </param>
     <param>
       <key>gain_dB_ch0</key>
-      <value>5</value>
+      <value>30</value>
     </param>
     <param>
       <key>gain_dB_ch1</key>
@@ -330,7 +330,7 @@
     </param>
     <param>
       <key>rf_freq</key>
-      <value>867.8e6</value>
+      <value>867.7e6</value>
     </param>
     <param>
       <key>samp_rate</key>

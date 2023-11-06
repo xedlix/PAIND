@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?grc format='1' created='3.7.13'?>
 <flow_graph>
-  <timestamp>Sun Apr 28 17:46:23 2019</timestamp>
+  <timestamp>Tue Sep 19 16:57:07 2023</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -30,7 +30,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 12)</value>
+      <value>(168, 4)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>lime_to_file</value>
+      <value>top_block</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -101,7 +101,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 76)</value>
+      <value>(328, 4)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -113,7 +113,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>1.625e6</value>
+      <value>32000</value>
     </param>
   </block>
   <block>
@@ -140,11 +140,11 @@
     </param>
     <param>
       <key>file</key>
-      <value>C:\Users\yanni\OneDrive\Documents\Hochschule\5.Semester\PAIND\loraShortShortNew.sig</value>
+      <value>C:\Users\yanni\OneDrive\Documents\Hochschule\5.Semester\PAIND\SDR\Offline Signal Analysis\radio.sig</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(552, 260)</value>
+      <value>(472, 220)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -168,61 +168,6 @@
     </param>
   </block>
   <block>
-    <key>blocks_stream_to_tagged_stream</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(256, 268)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_stream_to_tagged_stream_0</value>
-    </param>
-    <param>
-      <key>len_tag_key</key>
-      <value>"packet_len"</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>packet_len</key>
-      <value>1024</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
     <key>limesdr_source</key>
     <param>
       <key>allow_tcxo_dac</key>
@@ -230,7 +175,7 @@
     </param>
     <param>
       <key>analog_bandw_ch0</key>
-      <value>1.65e6</value>
+      <value>1500000</value>
     </param>
     <param>
       <key>analog_bandw_ch1</key>
@@ -266,7 +211,7 @@
     </param>
     <param>
       <key>digital_bandw_ch0</key>
-      <value>1.625e6</value>
+      <value>0</value>
     </param>
     <param>
       <key>digital_bandw_ch1</key>
@@ -282,7 +227,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 200)</value>
+      <value>(56, 160)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -290,7 +235,7 @@
     </param>
     <param>
       <key>gain_dB_ch0</key>
-      <value>5</value>
+      <value>60</value>
     </param>
     <param>
       <key>gain_dB_ch1</key>
@@ -330,7 +275,7 @@
     </param>
     <param>
       <key>rf_freq</key>
-      <value>867.8e6</value>
+      <value>90875000</value>
     </param>
     <param>
       <key>samp_rate</key>
@@ -342,14 +287,8 @@
     </param>
   </block>
   <connection>
-    <source_block_id>blocks_stream_to_tagged_stream_0</source_block_id>
-    <sink_block_id>blocks_file_sink_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>limesdr_source_0</source_block_id>
-    <sink_block_id>blocks_stream_to_tagged_stream_0</sink_block_id>
+    <sink_block_id>blocks_file_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

@@ -58,7 +58,7 @@ class lime_to_file(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.samp_rate = samp_rate = 1.5e6
+        self.samp_rate = samp_rate = 1.625e6
 
         ##################################################
         # Blocks
@@ -66,13 +66,14 @@ class lime_to_file(gr.top_block, Qt.QWidget):
         self.limesdr_source_0 = limesdr.source('', 0, '')
         self.limesdr_source_0.set_sample_rate(samp_rate)
         self.limesdr_source_0.set_center_freq(867.8e6, 0)
-        self.limesdr_source_0.set_bandwidth(1.5e6,0)
-        self.limesdr_source_0.set_gain(30,0)
+        self.limesdr_source_0.set_bandwidth(1.65e6,0)
+        self.limesdr_source_0.set_digital_filter(1.625e6,0)
+        self.limesdr_source_0.set_gain(5,0)
         self.limesdr_source_0.set_antenna(255,0)
         self.limesdr_source_0.calibrate(5e6, 0)
 
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_gr_complex, 1, 1024, "packet_len")
-        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_gr_complex*1, 'C:\\Users\\yanni\\OneDrive\\Documents\\Hochschule\\5.Semester\\PAIND\\loraShortShort.sig', False)
+        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_gr_complex*1, 'C:\\Users\\yanni\\OneDrive\\Documents\\Hochschule\\5.Semester\\PAIND\\loraShortShortNew.sig', False)
         self.blocks_file_sink_0.set_unbuffered(False)
 
 
