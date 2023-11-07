@@ -107,18 +107,20 @@ def GetPreamble(SF, net_id=64, sto_frac=0, R=1):
 
 # -----------------------------------------------------
 
-upchirp = GetUpchirp(SF)
-preamble = GetPreamble(SF)
+if __name__ == "__main__":
+
+    upchirp = GetUpchirp(SF)
+    preamble = GetPreamble(SF)
 
 
-print("signal size:",upchirp.shape[0])
+    print("signal size:",upchirp.shape[0])
 
-display_spectrogram(upchirp)
-display_spectrogram(preamble)
+    display_spectrogram(upchirp)
+    display_spectrogram(preamble)
 
-# -----------------------------------------------------
+    # -----------------------------------------------------
 
- # save in I/Q samples to a binary file
-filename = r"C:\Users\yanni\OneDrive\Documents\Hochschule\5.Semester\PAIND\preamble.sig"
-preamble.tofile(filename,sep='',format='%f')
+    # save in I/Q samples to a binary file
+    filename = r"C:\Users\yanni\OneDrive\Documents\Hochschule\5.Semester\PAIND\preamble.sig"
+    preamble.tofile(filename,sep='',format='%f')
 
