@@ -102,7 +102,8 @@ def GetPreamble(SF, net_id=64, sto_frac=0, R=1):
     sync_word = GetSymbol(SF, net_id, sto_frac=sto_frac, R=R)
 
     quarter_downchirp = downchirp[0:int(N*R/4)]
-    preamble = np.concatenate([np.tile(GetUpchirp(SF), 8), np.tile(sync_word, 2), np.tile(GetDownchirp(SF), 2), quarter_downchirp])
+    #preamble = np.concatenate([np.tile(GetUpchirp(SF), 8), np.tile(sync_word, 2), np.tile(GetDownchirp(SF), 2), quarter_downchirp])
+    preamble = np.concatenate([np.tile(GetUpchirp(SF), 8), np.tile(sync_word, 2), np.tile(GetDownchirp(SF), 2), quarter_downchirp, GetUpchirp(SF)])
     return preamble
 
 # -----------------------------------------------------

@@ -6,14 +6,14 @@ import socket
 import scipy.signal as signal
 
 # Inputs
-f_sample = 150000           # Sample Rate
-sf = 7                      # Spreading Factor
-bw = 125e3                  # Bandbreite der Übertragung
+F_SAMPLE = 150000           # Sample Rate
+SF = 7                      # Spreading Factor
+BW = 125e3                  # Bandbreite der Übertragung
 
 online = 0
 
-n = 2^(sf)                  # bits pro Symbol
-f_Hz = f_sample*(np.arange(8192)/8192-0.5) #????
+n = 2^SF                  # bits pro Symbol
+f_Hz = F_SAMPLE*(np.arange(8192)/8192-0.5) #????
 
 if online:
     # read in I/Q samples from binary file
