@@ -71,7 +71,7 @@ def GetSymbol(SF, S, sto_frac=0, R=1):
     # SF        = Spreding Factor {7,..,12}
     # N         = bits/symbol
     # S         = Symbol
-    # sto_frac  = 
+    # sto_frac  = sample time offset < 1 sample (fraction)
     # n         = number of symbols
 
     N = 2**SF
