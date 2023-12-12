@@ -58,20 +58,21 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.samp_rate = samp_rate = 125e3
+        self.samp_rate = samp_rate = 2e6
 
         ##################################################
         # Blocks
         ##################################################
         self.limesdr_source_0 = limesdr.source('', 0, '')
         self.limesdr_source_0.set_sample_rate(samp_rate)
-        self.limesdr_source_0.set_center_freq(867.7e6, 0)
+        self.limesdr_source_0.set_center_freq(867.8e6, 0)
+        self.limesdr_source_0.set_bandwidth(2e6,0)
         self.limesdr_source_0.set_gain(30,0)
         self.limesdr_source_0.set_antenna(255,0)
         self.limesdr_source_0.calibrate(5e6, 0)
 
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_gr_complex, 1, 1024, "packet_len")
-        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_gr_complex*1, 'C:\\Users\\yanni\\OneDrive\\Documents\\Hochschule\\5.Semester\\PAIND\\loraShortShortNewSingle.sig', False)
+        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_gr_complex*1, 'C:\\Users\\yanni\\OneDrive\\Documents\\Hochschule\\5.Semester\\PAIND\\lora16x3.sig', False)
         self.blocks_file_sink_0.set_unbuffered(False)
 
 

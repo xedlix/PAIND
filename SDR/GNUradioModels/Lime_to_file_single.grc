@@ -113,7 +113,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>125e3</value>
+      <value>2e6</value>
     </param>
   </block>
   <block>
@@ -140,7 +140,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>C:\Users\yanni\OneDrive\Documents\Hochschule\5.Semester\PAIND\loraShortShortNewSingle.sig</value>
+      <value>C:\Users\yanni\OneDrive\Documents\Hochschule\5.Semester\PAIND\lora16x3.sig</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -230,7 +230,7 @@
     </param>
     <param>
       <key>analog_bandw_ch0</key>
-      <value>0</value>
+      <value>2e6</value>
     </param>
     <param>
       <key>analog_bandw_ch1</key>
@@ -330,7 +330,7 @@
     </param>
     <param>
       <key>rf_freq</key>
-      <value>867.7e6</value>
+      <value>867.8e6</value>
     </param>
     <param>
       <key>samp_rate</key>
